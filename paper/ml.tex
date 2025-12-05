@@ -22,7 +22,7 @@ It could be the case that the high accuracy of our CNN model was mostly due to i
 In any case, since there are around 600k explicit implications from which the rest can be derived by transitivity (2.7\% of the total), if the CNN was learning transitivity it should perform well with a very small training dataset. Accordingly, we trained and assessed a CNN model with a 5\%/5\%/90\% training/validation/test proportion, with a resulting 99.6\% accuracy on test (the process finishing in under 20 minutes). But the high accuracy is maintained with even smaller training datasets, as evidenced in the following table:
 \begin{table}[h]
 \centering
-\caption{Prediction accuracy as function of size of training set}
+\caption{Prediction accuracy as a function of the size of the training set}
 \begin{tabular}{|c|c|}
 \hline
   \textbf{Training/validation/test proportion (\%)} & \textbf{Prediction accuracy (\%)} \\\hline\hline
@@ -60,4 +60,4 @@ Since sometimes machine learning is announced as a form of data compression, let
 
 \smallskip
 
-Lastly, also take into consideration that our CNN model does not only encode the implication graph up to order 4 (with 0.03\% of noise), but a priori may also be able to predict it for higher orders with a significant accuracy. Thus it could be used to guide and speed up the determination of the implication graph up to order 5, by letting ATPs focus first on the CNN’s predicted status of the studied implication.
+Lastly, note that our CNN model does not only encode the implication graph up to order 4 (with 0.03\% of noise), but a priori may also be able to predict it for higher orders with a significant accuracy. Thus it could be used to guide and speed up the determination of the implication graph up to order 5, by letting ATPs focus first on the CNN’s predicted status of the studied implication.
